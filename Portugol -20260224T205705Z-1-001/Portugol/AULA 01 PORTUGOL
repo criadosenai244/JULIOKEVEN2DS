@@ -1,0 +1,14 @@
+Algoritmo "semnome"
+
+Var
+professor: caractere
+nome: caractere
+Inicio
+professor <- " Victor Santos"
+escreva ("Digite o seu nome:")
+leia (nome)
+escreval ("*************")
+escreval (" Seja bem vindo "+ nome)
+escreval (" Aluno do "+ professor)
+escreval (" Melhor aluno " + nome)
+Fimalgoritmo
