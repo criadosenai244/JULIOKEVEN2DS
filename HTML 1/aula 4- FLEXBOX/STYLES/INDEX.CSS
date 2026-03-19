@@ -1,0 +1,26 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/* display block(padrao) */
+.pai{
+    width: 80%;
+    height: 500px;
+    padding: 20px;
+    background-color: darkgrey;
+    display: flex;
+    /* row linha */
+    /* column coluna */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* start - esquerda */
+    /* end - direita */
+    /* center - centro */
+    /* space- between/ aroud - separar centralizando */
+} 
+.filho{
+    padding: 30px;
+    margin: 10px 0px;
+    background-color: rgb(252, 134, 0);
+}
