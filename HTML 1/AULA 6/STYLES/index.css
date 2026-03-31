@@ -1,0 +1,62 @@
+#botaoAnima{
+    padding: 5px;
+    margin: 10px;
+    background-color: var(--corPrimaria);
+color: var(--corSecundaria);
+border: none;
+transition: 0,4s;
+}
+#textoAnima:focus{
+    border: none;
+    transition: 1s;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#botaoAnima:active{
+
+    border: 2px solid black;
+}
+body{
+    overflow: hidden;
+}
+
+#botaoAnima:hover{
+    background-color: var(--corPrimaria);
+    color: black;
+    padding: 10px;
+}
+
+@keyframes teste {
+    0%{
+        width: 150px;
+        height: 150px;
+    }
+    20%{
+        border-radius: 100%;
+    }
+    40%{
+        margin-top: 30px;
+    }
+    100%{
+        margin-top: 0%;
+        width: 200px;
+        height: 200px;
+        border-radius: 0%;
+    }
+}
+
+#caixa{
+width: 200px;
+height: 200px;
+animation-name: teste;
+animation-duration: 1s;
+background-color: var(--corPrimaria);
+
+}
+ /* #botaoAnima:hover{
+    animation-name: teste
+    animation-duration: 3s;
+    
+}*/
