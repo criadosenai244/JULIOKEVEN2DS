@@ -1,0 +1,28 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    padding: 80 px;
+    background-color: rgb(3, 97, 238);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    height: 60%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    flex-direction: column;
+    gap: 5px;
+    }
+
+.formAssunto{
+    border: 2px solid rgb(1, 1, 2);
+    padding: 5px; 
+    border-radius: 15 px;
+}

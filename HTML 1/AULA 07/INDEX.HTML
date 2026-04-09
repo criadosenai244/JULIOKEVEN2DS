@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLES/INDEX.CSS">
+</head>
+<body>
+    <form action="#">
+        <h1>FORMULARIO ABSURDO</h1>
+        <!-- INPUT NOME -->
+        <div class="formAssunto">
+        <label for="nome">Nome: </label>
+            <input id="nome" type="text" placeholder="LELES"> 
+        </div>
+        <!-- INPUT IDADE -->
+         <div class="formAssunto">
+        <label for="idade">Idade: </label>
+            <input id="idade" required type="number" min="0" max="200" step="1"> 
+        </div>
+          <!-- INPUT EMAIL -->
+         <div class="formAssunto">
+        <label for="email">Email: </label>
+            <input id="email" type="email" placeholder="EXEMPLO: fulano@gmail.com"> 
+        </div>
+        <!-- INPUT COR -->
+         <div class="formAssunto">
+        <label for="cor">Cor: </label>
+            <input id="cor" type="color" > 
+        </div>
+        <div>
+
+            <!-- INPUT ESTADO -->
+            <select name="ESTADO" id="estado">
+                <option value="">-</option>    
+                <option value="DF">DISTRITO FEDERAL</option>    
+                <option value="BH">BELO HORIZONTE</option>   
+                <option value="SP">SÃO PAULO</option> 
+                <option value="GO">GOIÁS</option> 
+                <option value="text">OUTROS</option> 
+            </select>
+        </div>
+            <!-- FEEDBAK -->
+          <TEXtarea style="resize: none;" name="feedback" id="feedback" cols="30" rows="10"></TEXtarea>
+        </div>
+        <!-- ENVIAR -->
+    <!-- <input type="button" value="ENVIAR"> -->
+    <button type="submit">ENVIAR</button>
+    <button type="reset">RESETAR</button>
+    <button type="button" id="bemvindo">NOME</button>
+    
+    </form>
+</body>
+<script>
+    document.getElementById("bemvindo").addEventListener("click", () => {
+        nome = document.getElementById("nome").value
+        alert("Seja bem vindo(a)"+ nome)
+    })
+</script>
+</html>
