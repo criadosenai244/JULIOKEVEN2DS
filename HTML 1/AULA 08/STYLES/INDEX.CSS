@@ -1,0 +1,27 @@
+@font-face {
+    font-family: gwenchana;
+    src: url('../fonts/gwenchana/Gwenchana.ttf');
+}
+@font-face {
+    font-family: super_kidpop;
+    src: url('../fonts/super_kidpop/Super\ Kidpop.ttf');
+} 
+    
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+:root{
+
+    --fontePrimaria : gwenchana ;
+    --fontSecundaria : super_kidpop;
+
+}
+
+h1{
+    font-family: var( --fontePrimaria);
+}
+  p{
+    font-family: var( --fontSecundaria);
+  }
