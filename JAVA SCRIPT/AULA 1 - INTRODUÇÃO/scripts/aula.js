@@ -18,7 +18,7 @@ var ligado = true;
 // *obs para numeros quebrados - float()
 // *obs para numeros inteiros - int()
 var idade = 23;
-var dinheiro = 108,50
+var dinheiro = 108
 //  array - lista , vetor
 var listaCompras = []
 console.log(typeof(nome));
