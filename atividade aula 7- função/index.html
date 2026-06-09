@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Jogador</title>
+    <style>
+        /* Tudo aqui dentro de <style> é o CSS para deixar o site bonito */
+        body {
+            background-color: #1a1a2e; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex; /* Usado para centralizar o cartão na tela */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cartao-perfil {
+            background-color: #16213e;
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); /* Sombra neon azul */
+            padding: 30px;
+            width: 400px;
+            border: 2px solid #0f3460;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00d4ff;
+            border-bottom: 2px solid #e94560; /* Linha vermelha embaixo do título */
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .grupo-info {
+            background-color: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        strong {
+            color: #e94560; /* Destaque vermelho nos rótulos */
+        }
+
+        .tipo-dado {
+            font-size: 12px;
+            color: #888;
+            font-style: italic;
+            float: right; /* Joga o tipo (string, number) para a direita */
+        }
+
+        .status-on {
+            color: #00ff00; /* Verde para online */
+            font-weight: bold;
+        }
+
+        .caixa-desafio {
+            text-align: center;
+            background-color: #e94560;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(233, 69, 96, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cartao-perfil">
+        <h1>Perfil do Jogador</h1>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        // 1. Variáveis
+        const nomeJogador = "Julio"; 
+        let idade = 25;              
+        let isOnline = true;         
+
+        let jogoFavorito = {
+            nome: "The Witcher 3",
+            anoLancamento: 2015
+        };
+
+        let pontuacoes = [1500, 2100, 1800]; 
+        let media = (pontuacoes[0] + pontuacoes[1] + pontuacoes[2]) / 3;
+
+        // 2. Um pequeno truque para mostrar o status bonitinho
+        let statusTexto = isOnline ? "<span class='status-on'>🟢 Online</span>" : "🔴 Offline";
+
+        // 3. Pegando a área no HTML e escrevendo com o visual novo
+        let telaHTML = document.getElementById("resultado");
+
+        telaHTML.innerHTML = `
+            <div class="grupo-info">
+                <p><strong>Nome:</strong> ${nomeJogador} <span class="tipo-dado">(string)</span></p>
+                <p><strong>Idade:</strong> ${idade} anos <span class="tipo-dado">(number)</span></p>
+                <p><strong>Status:</strong> ${statusTexto} <span class="tipo-dado">(boolean)</span></p>
+            </div>
+
+            <div class="grupo-info">
+                <p><strong>Jogo Favorito:</strong> ${jogoFavorito.nome} (${jogoFavorito.anoLancamento}) <span class="tipo-dado">(object)</span></p>
+                <p><strong>Pontuações:</strong> ${pontuacoes[0]} | ${pontuacoes[1]} | ${pontuacoes[2]} <span class="tipo-dado">(object)</span></p>
+            </div>
+            
+            <div class="caixa-desafio">
+                🏆 <strong>Média de Pontos:</strong> <br>
+                ${media.toFixed(2)} pts
+            </div>
+        `;
+    </script>
+
+</body>
+</html>
