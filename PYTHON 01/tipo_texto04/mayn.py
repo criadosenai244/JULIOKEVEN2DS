@@ -7,3 +7,8 @@ print ('olá' + nome + '!')
 
 # f-string - Forma moderna e recomendada
 print(f'meu nome é {nome}e moro em {cidade}')
+
+#tamanho 
+print(len(nome))  # 6
+
+print (type(nome))    #<class 'str'>
